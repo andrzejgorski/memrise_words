@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+
+  "name": "MemriseWords",
+  "description": "This extension allows user to save the words he/she wants to learn by web browser. It also provide functionality to easy add memrise course to learn them.",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "MemriseWords"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

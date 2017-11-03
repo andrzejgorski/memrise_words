@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <style>
+    #alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+    }
+
+    #alert.success {background-color: #4CAF50;}
+    #alert.info {background-color: #2196F3;}
+    #alert.warning {background-color: #ff9800;}
+
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .closebtn:hover {
+        color: black;
+    }
+    </style>
+
+    <style type="text/css">
+      body {
+        width: 10cm;
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"> </script>
+  </head>
+
+  <body>
+    <div id="alert">
+      <span class="closebtn">&times;</span>
+      <strong id="alert-type">Success!</strong> <a id="alert-text"> </a>
+    </div>
+
+    <button id="add_word" >Add word</button>
+    <button id="check_words" >Check words</button>
+    <button id="add_to_memrise" >Add to Memrise</button>
+    <div id="words-table" display="none"> </div>
+  </body>
+</html>
